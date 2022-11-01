@@ -2,20 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:millers/splash.dart';
 
 import 'Screen3.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen2(),
     );
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 class SplashScreen2 extends StatefulWidget {
-  const SplashScreen2({Key key}) : super(key: key);
+  const SplashScreen2({Key? key}) : super(key: key);
 
   @override
   State<SplashScreen2> createState() => _SplashScreen2State();

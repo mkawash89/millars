@@ -48,6 +48,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:millers/splash2.dart';
 
+import 'SplashScreen2.dart';
+
 void main() {
   runApp(MyApp());
 }

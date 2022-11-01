@@ -6,11 +6,11 @@ import 'package:flutter/rendering.dart';
 import 'login.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 class SplashScreen3 extends StatefulWidget {
-  const SplashScreen3({Key key}) : super(key: key);
+  const SplashScreen3({Key? key}) : super(key: key);
 
   @override
   State<SplashScreen3> createState() => _SplashScreen3State();

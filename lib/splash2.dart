@@ -10,18 +10,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-         home: SplashScreen2(),
+         home: Splash2(),
     );
   }
 }
 
-class SplashScreen2 extends StatefulWidget {
-  const SplashScreen2({Key? key}) : super(key: key);
+class Splash2 extends StatefulWidget {
+  const Splash2({Key? key}) : super(key: key);
   @override
-  State<SplashScreen2> createState() => _SplashScreen2State();
+  State<Splash2> createState() => _Splash2State();
 }
 
-class _SplashScreen2State extends State<SplashScreen2> {
+class _Splash2State extends State<Splash2> {
   late double width;
   @override
   Widget build(BuildContext context) {
