@@ -46,7 +46,6 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:millers/splash2.dart';
 
 import 'SplashScreen2.dart';
 
@@ -57,8 +56,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-
+    return const MaterialApp(
       home: MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -66,6 +64,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -76,15 +76,14 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     Timer(
         const Duration(seconds: 3),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => const SplashScreen2())));
+        () => Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => const SplashScreen2())));
   }
 
   @override
   Widget build(BuildContext context) {
     return const Image(
-      image:  AssetImage('milers.png'),
+      image: AssetImage('milers.png'),
     );
   }
 }
-

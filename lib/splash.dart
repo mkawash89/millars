@@ -11,7 +11,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
 }
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key ?key, }) : super(key: key);
+  const SplashScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -29,10 +31,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(child: Image.asset(
+        body: Center(
+      child: Image.asset(
         'milerslogo.png',
       ),
-      )
-    );
+    ));
   }
 }

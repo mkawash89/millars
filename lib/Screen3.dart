@@ -1,12 +1,9 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
 import 'login.dart';
+import 'login_1.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -40,37 +37,35 @@ class _SplashScreen3State extends State<SplashScreen3> {
                 Expanded(
                   child: Image.asset('delivery.png',alignment: Alignment.center,),
                 ),
-                Padding(padding: EdgeInsets.all(8)),
-                Expanded(
+                const Padding(padding: EdgeInsets.all(8)),
+                const Expanded(
                     child: Text(
                       'Fast Delivery',
                       style: TextStyle(fontSize: 18),
                     )),
                 Container( height: 80,
                   width: 250,
-                  padding: EdgeInsets.all(16),
-                  child: Text(
+                  padding: const EdgeInsets.all(16),
+                  child: const Text(
                     'Fast food Delivery to your home,office wherever you are',
                     style: TextStyle(fontSize: 8),
                   ),
                 ),
                 Container(
-                    width: 100,
-                    padding:EdgeInsets.all(5) ,
-
-                    color: Colors.red,
-                    child:TextButton(
-                      style: TextButton.styleFrom(
-                        padding: EdgeInsets.all(5),
-                        primary: Colors.white,
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                            context, MaterialPageRoute(builder: (_) => Login()));
-                      },
-                      child: Text('Next',style: TextStyle(fontSize: 9),),
-                    )
-
+                  height: 50,
+                  width: 250,
+                  decoration: BoxDecoration(
+                      color: Colors.red, borderRadius: BorderRadius.circular(20)),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => Login()));
+                    },
+                    child: const Text(
+                      'Next',
+                      style: TextStyle(color: Colors.white, fontSize: 25),
+                    ),
+                  ),
                 ),
 
               ],

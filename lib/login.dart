@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:millers/login_1.dart';
 import 'package:millers/splash.dart';
 void main() {
   runApp(MyApp());
@@ -32,10 +33,10 @@ class _LoginState extends State<Login> {
                 child: Container(
                     width: 200,
                     height: 150,
-                    child: Image.asset('milerslogo.png')),
+                    child: Image.asset('milers.png')),
               ),
             ),
-            Padding(
+            const Padding(
               //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
@@ -72,10 +73,10 @@ class _LoginState extends State<Login> {
               child: TextButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => SplashScreen()));
+                      MaterialPageRoute(builder: (_) => Login1()));
                 },
-                child: Text(
-                  'Login',
+                child: const Text(
+                  'Losdfsfgin',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
