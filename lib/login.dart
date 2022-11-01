@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:millers/login_1.dart';
-import 'package:millers/splash.dart';
 void main() {
   runApp(MyApp());
 }
@@ -39,30 +38,26 @@ class _LoginState extends State<Login> {
             const Padding(
               //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
               padding: EdgeInsets.symmetric(horizontal: 15),
-              child: TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Email',
-                    hintText: 'Enter valid email id as abc@gmail.com'),
-              ),
+              child: Text('Discover the best foods from over 1,000 restaurants and fast delivery to your doorstep'
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  left: 15.0, right: 15.0, top: 15, bottom: 0),
-              //padding: EdgeInsets.symmetric(horizontal: 15),
-              child: TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Password',
-                    hintText: 'Enter secure password'),
-              ),
+
             ),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                'Forgot Password',
-                style: TextStyle(color: Colors.red, fontSize: 15),
+
+
+            Container(
+              height: 50,
+              width: 250,
+              decoration: BoxDecoration(
+                  color: Colors.red, borderRadius: BorderRadius.circular(20)),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => Login1()));
+                },
+                child: const Text(
+                  'Login',
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
               ),
             ),
             Container(
@@ -76,7 +71,7 @@ class _LoginState extends State<Login> {
                       MaterialPageRoute(builder: (_) => Login1()));
                 },
                 child: const Text(
-                  'Losdfsfgin',
+                  'Login',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
@@ -84,8 +79,8 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: 130,
             ),
-            Text('New User? Create Account')
-          ],
+
+        ],
         ),
       ),
     );
