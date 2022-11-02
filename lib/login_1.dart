@@ -44,7 +44,7 @@ class _Login1State extends State<Login1> {
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Email',
-                    hintText: 'Enter valid email id as abc@gmail.com'),
+                    hintText: 'Your Email'),
               ),
             ),
             const Padding(
@@ -56,16 +56,10 @@ class _Login1State extends State<Login1> {
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
-                    hintText: 'Enter secure password'),
+                    hintText: ' password'),
               ),
             ),
-            TextButton(
-              onPressed: () {},
-              child: const Text(
-                'Forgot Password',
-                style: TextStyle(color: Colors.red, fontSize: 15),
-              ),
-            ),
+
             Container(
               height: 50,
               width: 250,
@@ -76,16 +70,43 @@ class _Login1State extends State<Login1> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (_) => SplashScreen()));
                 },
-                child: Text(
+                child: const Text(
                   'Login',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
             ),
-            SizedBox(
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'Forgot Password',
+                style: TextStyle(color: Colors.red, fontSize: 15),
+              ),
+            ),
+            SizedBox( height: 130,child: Text('Or Login With')),
+            const SizedBox(
               height: 130,
             ),
-            Text('New User? Create Account')
+            const Text('Don\'t Have Account ? Sign Up'),
+            Container(
+              height: 50,
+              width: 250,
+              decoration: BoxDecoration(
+                  color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => SplashScreen()));
+                },
+                child: const Text(
+                  'Login With FaceBook',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 130,
+            ),
           ],
         ),
       ),
