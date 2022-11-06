@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:millers/login_1.dart';
+
+import 'SignUp.dart';
 void main() {
   runApp(MyApp());
 }
@@ -73,7 +75,7 @@ class _LoginState extends State<Login> {
               child: TextButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => Login1()));
+                      MaterialPageRoute(builder: (_) => SignUp()));
                 },
                 child: const Text(
                   'Create An Account',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:millers/SignUp.dart';
 import 'package:millers/splash.dart';
 void main() {
   runApp(MyApp());
@@ -68,7 +69,7 @@ class _Login1State extends State<Login1> {
               child: TextButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => SplashScreen()));
+                      MaterialPageRoute(builder: (_) => const SignUp()));
                 },
                 child: const Text(
                   'Login',
