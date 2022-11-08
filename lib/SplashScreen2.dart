@@ -58,16 +58,17 @@ class _SplashScreen2State extends State<SplashScreen2> {
                       color: Colors.red, borderRadius: BorderRadius.circular(20)),
                   child: TextButton(
                     onPressed: () {
-                      print('Splashscreen2 clicked');
                       Navigator.push(context,
                           MaterialPageRoute(builder: (_) => SplashScreen3()));
                     },
+
                     child: const Text(
                       'Next',
                       style: TextStyle(color: Colors.white, fontSize: 25),
                     ),
                   ),
                 ),
+                SizedBox()
               ],
             )),
       ),

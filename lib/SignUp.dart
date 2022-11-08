@@ -8,7 +8,9 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body:
+
+    SafeArea(
           child: Stack(
             children: [
               Container(
@@ -37,7 +39,7 @@ class SignUp extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: 250,
+                      height: 100,
                       width: MediaQuery
                           .of(context)
                           .size
@@ -50,7 +52,7 @@ class SignUp extends StatelessWidget {
                       child: Image.asset("milers.png"),
                     ),
                     const SizedBox(
-                      height: 10,
+                       height: 50,
                     ),
                     const Center(
                       child: Text(
@@ -66,46 +68,57 @@ class SignUp extends StatelessWidget {
                       headerText: '',
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 8,
                     ),
                     InputField(headerText: "", hintTexti: "Email"),
                     const SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     InputField(
                       headerText: "",
                       hintTexti: "Mobile No",
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     InputField(
                       headerText: "",
                       hintTexti: "Adress",
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     InputField(
                       headerText: "",
                       hintTexti: "Password",
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     InputField(
                       headerText: "",
                       hintTexti: "Confirm Password",
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    SizedBox(
-                      child: InkWell(
-                        onTap: () {},
-                        child: Text(''),
+                    // const SizedBox(
+                    //   height: 10,
+                    // ),
+                    Container(
+                      height: 50,
+                      width: 250,
+                      decoration: BoxDecoration(
+                          color: Colors.red, borderRadius: BorderRadius.circular(20)),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => const SignUp()));
+                        },
+                        child: const Text(
+                          'Sign Up',
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
                       ),
                     ),
+
                     Container(
                       margin: EdgeInsets.only(
                           left: MediaQuery
@@ -115,7 +128,7 @@ class SignUp extends StatelessWidget {
                           top: MediaQuery
                               .of(context)
                               .size
-                              .height * 0.08),
+                              .height * 0.05),
                       child: Text.rich(
                         TextSpan(
                             text: "I already Have an account ",
@@ -182,7 +195,7 @@ class InputField extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              padding: const EdgeInsets.symmetric(horizontal: 5.0),
               child: TextField(
                 decoration: InputDecoration(
                   hintText: hintTexti,
@@ -211,18 +224,17 @@ class InputFieldPassword extends StatefulWidget {
 }
 
 class _InputFieldPasswordState extends State<InputFieldPassword> {
-  bool _visible = true;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
+        Container(height: 50,
           margin: const EdgeInsets.only(
             left: 20,
             right: 20,
-            bottom: 10,
+            bottom: 5,
           ),
           child: Text(
             widget.headerText,
@@ -230,48 +242,10 @@ class _InputFieldPasswordState extends State<InputFieldPassword> {
                 color: Colors.black, fontSize: 22, fontWeight: FontWeight.w500),
           ),
         ),
-        Container(
-          margin: const EdgeInsets.only(left: 20, right: 20),
-          decoration: BoxDecoration(
-            color: Colors.grey.withOpacity(0.5),
-            // border: Border.all(
-            //   width: 1,
-            // ),
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0),
-            child: TextField(
-              obscureText: _visible,
-              decoration: InputDecoration(
-                  hintText: widget.hintTexti,
-                  border: InputBorder.none,
-                  suffixIcon: IconButton(
-                      icon: Icon(
-                          _visible ? Icons.visibility : Icons.visibility_off),
-                      onPressed: () {
-                        setState(() {
-                          _visible = !_visible;
-                        });
-                      })),
-            ),
-          ),
-        ),
+
       ],
     );
   }
 }
 
-// class TopSginup extends StatelessWidget {
-//   const TopSginup({
-//     Key? key,
-//   }) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       margin: const EdgeInsets.only(top: 15, left: 20),
-//       child: (Text('dsgdsfgdfg')),
-//     );
-//   }
-// }
+
